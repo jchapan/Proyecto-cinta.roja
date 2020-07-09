@@ -20,6 +20,11 @@ function Cartera() {
       })
   } , [])
 
+  const [amount, setAmaunt] = useState()
+  useEffect (()=>{
+
+  }, [amount])
+
   return (
     <>
       <Header />
@@ -34,7 +39,7 @@ function Cartera() {
                 <div className="input-group-prepend">
                  <span className="input-group-text" id="basic-addon1">BTC</span>
                 </div>
-                <input type="text" className="form-control" placeholder="Amount" aria-label="Username" aria-describedby="basic-addon1" onChange/>
+                <input type="text" className="form-control" placeholder="Amount" aria-label="Username" aria-describedby="basic-addon1" onChange={(event)=>{setAmount(event.target.value)}}/>
                 <div className="input-group-prepend">
                  <span className="input-group-text" id="basic-addon1">ETH</span>
                 </div>
@@ -66,7 +71,11 @@ function Cartera() {
                         <td scope="col-sm-1">Falta Calcular</td>
                         <td scope="col-sm-1">{coin.percent_change_24h + " %"}</td>
                         <td scope="col-sm-2">{"$" + new Intl.NumberFormat("en-US").format(coin.price_usd)}</td>
-                        <td scope="col-sm-1"><Precio /></td>
+                        <td scope="col-sm-1">
+                            <MyCoins 
+                            price = {coin.price_usd}
+                            amount = {}
+                            /></td>
                     </tr> : undefined
                 })}
                 </tbody>
