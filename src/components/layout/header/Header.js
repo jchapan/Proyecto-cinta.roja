@@ -17,8 +17,8 @@ function Header() {
                     </Link>
                     </li>
                     <li className="nav-item">
-                    <Link className="nav-link" to="/">
-                      Otra cosa 2
+                    <Link className="nav-link" to="/trading">
+                      Trading
                     </Link>
                   </li>
                   </ul>
