@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import Header from '../../layout/header/Header'
 import Footer from '../../layout/footer/Footer'
 import TablaCoins from '../TablaCoins/TablaCoins'
+import './Home.css'
 
 import axios from 'axios'
 
@@ -28,7 +29,7 @@ function Home() {
         <div className="card">
             <div className="card-body">
                 <h3>Crypto Currency Info</h3>     
-                <table  className="table">
+                <table  className="table table-striped table-dark">
                     <tbody >
                     <tr>
                         <th scope="col-sm-3">Name</th>

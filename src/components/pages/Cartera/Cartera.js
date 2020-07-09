@@ -35,7 +35,7 @@ function Cartera(porps) {
     <div className="card">
         <div className="card-body">
             <h3>Crypto Currency Info</h3>     
-            <table  className="table">
+            <table  className="table table-striped table-dark">
                 <tbody >
                 <tr>
                     <th scope="col-sm-1">Symbol</th>
