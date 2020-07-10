@@ -8,12 +8,12 @@ function Header() {
                 <ul className="nav">
                   <li className="nav-item">
                     <Link className="nav-link" to="/">
-                      Inicio
+                      Home
                     </Link>
                   </li>
                   <li className="nav-item">
                     <Link className="nav-link" to="/cartera">
-                      Cartera
+                      Wallet
                     </Link>
                     </li>
                     <li className="nav-item">

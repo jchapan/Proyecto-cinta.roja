@@ -14,7 +14,7 @@ function Home() {
       .then((response)=>{
           let allCoins = response.data.data
           setCoins(allCoins)
-          console.log(allCoins)
+        //   console.log(allCoins)
       }) .catch((err)=>{
           console.log(err)
       })
