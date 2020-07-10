@@ -32,22 +32,24 @@ function Home() {
         <div className="card">
             <div className="card-body">
                 <h3>Crypto Currency Info</h3>  
-                <div className="input-group mb-3">
+                <div className="input-group md-3">
                     <div className="input-group-prepend">
-                    <label className="input-group-text" for="Moneda">Coin</label>
+                    <label className="input-group-text bg-dark" for="Moneda">Calc USD</label>
                     </div>
-                    <input type="text" className="form-control" placeholder="Amount" aria-label="Username" aria-describedby="basic-addon1" onChange={(event)=>{setAmount(event.target.value)}}/>
-                    </div>   
+                    <input type="text" className="form-control col-sm-3 bg-dark" placeholder="Amount" aria-label="Username" aria-describedby="basic-addon1" onChange={(event)=>{setAmount(event.target.value)}}/>
+                    </div>
+                    <br />   
                 <table  className="table table-striped table-dark">
                     <tbody >
                     <tr>
-                        <th scope="col-sm-3">Name</th>
+                        <th scope="col-sm-2">Name</th>
                         <th scope="col-sm-1">Symbol</th>
                         <th scope="col-sm-3">Market Cap</th>
                         <th scope="col-sm-2">Price</th>
                         <th scope="col-sm-1">Change 24H</th>
                         <th scope="col-sm-1">Change 1H</th>
                         <th scope="col-sm-1">Change 7D</th>
+                        <th scope="col-sm-1">Total</th>
                     </tr>
                       {
                           coins.map((coin)=>{
