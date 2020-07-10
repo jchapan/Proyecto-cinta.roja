@@ -8,7 +8,7 @@ function MyCoins(props) {
     useEffect (()=>{
       axios.get(URL)
       .then((response)=>{
-          let allCoins = response.data.data
+          let allCoins = response.data[0]
           setCoins(allCoins)
           console.log(allCoins)
       }) .catch((err)=>{
@@ -20,7 +20,9 @@ function MyCoins(props) {
         <>
          <th scope="col-sm-3">{props.name}</th>
          <th scope="col-sm-3">{props.amount}</th>   
-         {/* <th scope="col-sm-3">{coins.percent_change_24h}</th> */}
+         <th scope="col-sm-3">{coins.percent_change_24h}</th>
+         <th scope="col-sm-3">{coins.price_usd}</th>
+         <th scope="col-sm-3">{props.amount*coins.price_usd}</th>
         </>
     )
 }
