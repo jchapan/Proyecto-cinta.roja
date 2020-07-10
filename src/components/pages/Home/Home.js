@@ -19,6 +19,9 @@ function Home() {
           console.log(err)
       })
   } , [])
+  const [amount, setAmount] = useState(0)
+  useEffect (()=>{
+  }, [amount])
 
     return (
         <>
@@ -28,7 +31,13 @@ function Home() {
         <div className="col-sm-12">
         <div className="card">
             <div className="card-body">
-                <h3>Crypto Currency Info</h3>     
+                <h3>Crypto Currency Info</h3>  
+                <div className="input-group mb-3">
+                    <div className="input-group-prepend">
+                    <label className="input-group-text" for="Moneda">Coin</label>
+                    </div>
+                    <input type="text" className="form-control" placeholder="Amount" aria-label="Username" aria-describedby="basic-addon1" onChange={(event)=>{setAmount(event.target.value)}}/>
+                    </div>   
                 <table  className="table table-striped table-dark">
                     <tbody >
                     <tr>
@@ -51,6 +60,7 @@ function Home() {
                           ch1 = {coin.percent_change_1h}
                           ch7 = {coin.percent_change_7d}
                           key = {coin.id}
+                          amount = {amount}
                           /></tr>
                         })
                       }

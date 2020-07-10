@@ -10,6 +10,7 @@ function TablaCoins(props) {
         <td scope="col-sm-1">{props.ch24 + " %"}</td>
         <td scope="col-sm-1">{props.ch1 + " %"}</td>
         <td scope="col-sm-1">{props.ch7 + " %"}</td>
+        <td>{new Intl.NumberFormat("en-US").format(props.amount/props.price) +" "+ props.symbol}</td>
         </>
     )
 }
