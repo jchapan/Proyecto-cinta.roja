@@ -8,12 +8,13 @@ import axios from 'axios'
 
 function Cartera() { 
     const URL=`https://api.coinlore.net/api/tickers/`
+
     const [coins, setCoins] = useState([])
-    const misMonedas=[  {"name":"BTC",    "amount":2,        "id":90},
-                        {"name":"ETH",    "amount":200,      "id":80},
-                        {"name":"XRP",    "amount":1000,     "id":58},
-                        {"name":"USDT",   "amount":10000,   "id":518},
-                        {"name":"BCH",    "amount":1000,    "id":2321}    ]
+    const misMonedas=[  {"name":"BTC",        "id":90},
+                        {"name":"ETH",      "id":80},
+                        {"name":"XRP",     "id":58},
+                        {"name":"USDT",  "id":518},
+                        {"name":"BCH",    "id":2321}    ]
     
     useEffect (()=>{
       axios.get(URL)
@@ -53,7 +54,6 @@ function Cartera() {
                     misMonedas.map((coin)=>{
                     return <tr><MyCoins 
                     name = {coin.name}
-                    amount ={coin.amount}
                     id = {coin.id}
                     /></tr>
                     })

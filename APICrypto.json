@@ -3,7 +3,7 @@
         {
             "id": 1,
             "Nombre": "Proyecto CR",
-            "BTC": "100",
+            "BTC":[{"amount":"100","id":90}],
             "ETH": "80",
             "XRP": "60",
             "USDT": "1000",
