@@ -1,22 +1,24 @@
 {
     "crypto":[
         {
-            "id": 1,
-            "Nombre": "Proyecto CR",
-            "BTC": "100",
-            "ETH": "80",
-            "XRP": "60",
-            "USDT": "1000",
-            "BCH": "40"
-    },
-    {
-        "id": 2,
-        "Nombre": "Proyecto CR2",
-        "BTC": "200",
-        "ETH": "10",
-        "XRP": "40",
-        "USDT": "160",
-        "BCH": "5" 
-    }
-]
+            "name": "BTC",
+            "amount": "100"
+        },
+        {
+            "name": "ETH",
+            "amount": "50"
+        },
+        {
+            "name": "XRP",
+            "amount": "200"
+        },
+        {
+            "name": "USDT",
+            "amount": "1000"
+        },
+        {
+            "name": "BCH",
+            "amount": "30"
+        }
+    ]
 }
