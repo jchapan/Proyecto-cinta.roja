@@ -9,7 +9,7 @@ import axios from 'axios'
 function Cartera() { 
     const URL=`https://api.coinlore.net/api/tickers/`
     const [coins, setCoins] = useState([])
-    const misMonedas=[{"name":"BTC", "amount":1}]
+    const misMonedas=[{"name":"BTC", "amount":1, "id":90}]
     
     useEffect (()=>{
       axios.get(URL)
@@ -49,7 +49,7 @@ function Cartera() {
                     return <tr><MyCoins 
                     name = {coin.name}
                     amount ={coin.amount}
-               
+                    id = {coin.id}
                     /></tr>
                     })
                 }
