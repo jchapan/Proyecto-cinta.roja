@@ -58,26 +58,6 @@ function Cartera() {
                     /></tr>
                     })
                 }
-
-
-                {/* {
-                
-                coins.map((coin)=>{
-                    return coin.symbol === 'BTC' || coin.symbol === 'ETH' || coin.symbol === 'XRP' || coin.symbol === 'USDT' ? 
-                        <tr>
-                        <th scope="col-sm-3">{coin.name}</th>
-                        <td scope="col-sm-1">Falta Calcular</td>
-                        <td scope="col-sm-1">{coin.percent_change_24h + " %"}</td>
-                        <td scope="col-sm-2">{"$" + new Intl.NumberFormat("en-US").format(coin.price_usd)}</td>
-                        <td scope="col-sm-1">
-                            { 
-                            // Moneda.value == 1 ?
-                            new Intl.NumberFormat("en-US").format(amount/coin.price_btc) +" "+ coin.symbol
-                        // : undefined 
-                        }
-                            </td>
-                    </tr> : undefined
-                })} */}
                 </tbody>
             </table>
         </div>
