@@ -21,7 +21,7 @@ function WalletInfo(props) {
         {
             walletCoins.map((cantidad)=>{
                 return props.moneda == cantidad.name ?
-                 parseInt(cantidad.amount) :undefined
+                 cantidad.amount :undefined
             })
         }
         </>

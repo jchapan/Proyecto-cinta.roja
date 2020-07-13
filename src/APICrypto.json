@@ -2,23 +2,23 @@
     "crypto":[
         {
             "name": "BTC",
-            "amount": "100"
+            "amount": 100
         },
         {
             "name": "ETH",
-            "amount": "50"
+            "amount": 50
         },
         {
             "name": "XRP",
-            "amount": "200"
+            "amount": 200
         },
         {
             "name": "USDT",
-            "amount": "1000"
+            "amount": 1000
         },
         {
             "name": "BCH",
-            "amount": "30"
+            "amount": 30
         }
     ]
 }
