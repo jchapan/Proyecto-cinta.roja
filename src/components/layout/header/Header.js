@@ -12,13 +12,18 @@ function Header() {
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/cartera">
+                    <Link className="nav-link wallet" to="/cartera">
                       Wallet
                     </Link>
                     </li>
                     <li className="nav-item">
                     <Link className="nav-link" to="/trading">
                       Trading
+                    </Link>
+                    </li>
+                    <li className="nav-item">                   
+                    <Link className="nav-link" to="/login">
+                      Log In
                     </Link>
                   </li>
                   </ul>

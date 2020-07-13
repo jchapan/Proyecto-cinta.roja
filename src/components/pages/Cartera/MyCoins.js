@@ -13,12 +13,10 @@ function MyCoins(props) {
       .then((response)=>{
           let allCoins = response.data[0]
           setCoins(allCoins)
-        //   console.log(allCoins)
-      }) .catch((err)=>{
+      }).catch((err)=>{
           console.log(err)
       })
   } , [])
-
 
 
     return (

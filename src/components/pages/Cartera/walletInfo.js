@@ -10,7 +10,6 @@ function WalletInfo(props) {
         .then((response)=>{
             let allWalletCoins = response.data[0].coins
             setWalletCoins(allWalletCoins)
-            console.log(allWalletCoins)
         }) .catch((err)=>{
             console.log(err)
         })
