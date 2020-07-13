@@ -1,8 +1,8 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import Header from '../../layout/header/Header'
 import Footer from '../../layout/footer/Footer'
 import Cartera from '../Cartera/Cartera'
-import {Redirect, Route} from 'react-router-dom'
+// import {BrowserRouter, Route, Switch, Link} from 'react-router-dom'
 
 import axios from 'axios'
 
@@ -25,14 +25,13 @@ function Login() {
                 let allUsers = response.data
                 setValida(allUsers)
                 console.log(allUsers)
-                clear()
             }).catch((err)=>{
                 console.log(err)
             })
             valida.map((user)=>{
                 if(user.Nombre == name && user.Pass == pass){
                 alert(`Bienvenido ${name}`)
-                // return <Route exact path="/cartera" component={Cartera} />
+                // return <Link className="nav-link wallet" to="/cartera" />
             }else { 
                 alert('Usuario no registrado')}
             })

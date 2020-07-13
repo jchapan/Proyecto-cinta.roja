@@ -12,7 +12,7 @@ function Header() {
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link wallet" to="/cartera">
+                    <Link className="nav-link wallet" to="/wallet">
                       Wallet
                     </Link>
                     </li>

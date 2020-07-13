@@ -29,7 +29,6 @@ function Cartera() {
 
   return (
     <>
-      <Header />
       <div className="container">
           {/* <GraficaCartera /> */}
     {
@@ -64,7 +63,6 @@ function Cartera() {
   </div>
   }
       </div>
-      <Footer />  
     </>
 )
 
