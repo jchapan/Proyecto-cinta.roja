@@ -16,6 +16,7 @@ function Trading() {
     <Header />
     <Cartera />
     <div className="container">
+      <div className="row">
             <h3>Buy / Sell Crypto</h3>
             <form onSubmit = {ejecutar}>
                 <div className="from-group col-4">
@@ -52,6 +53,7 @@ function Trading() {
                 </div>
                 <button type="submit" className="btn btn-danger">Trade</button>
             </form>
+            </div>
             </div>
     <Footer />
     </>
