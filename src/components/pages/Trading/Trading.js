@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Cartera from '../Cartera/Cartera'
 import Header from '../../layout/header/Header'
 import Footer from '../../layout/footer/Footer'
+import './Trading.css'
 
 function Trading() {
   const [coinSell, setCoinSell] = useState('')
@@ -15,11 +16,13 @@ function Trading() {
     <>
     <Header />
     <Cartera />
+    <br />
+    <div className="container">
+      <div className="col-sm-6">
+        <div className="card">
+          <div className="card-body">
       <h3>Buy / Sell Crypto</h3>
-        <div className="container">
-          {/* <div className="row"> */}
             <form onSubmit = {ejecutar}>
-                <div className="from-group col-sm-6">
                 <label>Select the Coin to Sell</label>
                 <select 
                 className="form-control" 
@@ -34,9 +37,20 @@ function Trading() {
                     <option value="4">USDT</option>
                     <option value="5">BCH</option>
                 </select>
-                </div>
-                <div className="from-group col-sm-6">
-                <label>Select the Coin to coinBuy</label>
+                <br />
+            </form>
+            </div>
+            </div>
+            </div>
+            <div className="container"></div>
+      <div className="col-sm-6">
+        <div className="card">
+          <div className="card-body">
+      <h3>Buy / Sell Crypto</h3>
+            <form onSubmit = {ejecutar}>
+
+                <div className="from-group">
+                <label>Select the Coin to Buy</label>
                 <select 
                 className="form-control" 
                 name="coinBuy"
@@ -52,10 +66,16 @@ function Trading() {
                 </select>
                 </div>
                 <br />
-                <button type="submit" className="btn btn-danger">Trade</button>
+                
             </form>
             </div>
-            {/* </div> */}
+            </div>
+            </div>
+            </div>
+            <br />
+            <div className="row justify-content-center">
+            <button type="submit" className="btn btn-danger" id="trade">Trade</button>
+            </div>
             <br />
     <Footer />
     </>
