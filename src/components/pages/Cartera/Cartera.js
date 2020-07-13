@@ -21,7 +21,6 @@ function Cartera() {
       .then((response)=>{
           let allCoins = response.data.data
           setCoins(allCoins)
-          console.log(allCoins)
       }) .catch((err)=>{
           console.log(err)
       })
@@ -30,7 +29,6 @@ function Cartera() {
 
   return (
     <>
-      <Header />
       <div className="container">
           {/* <GraficaCartera /> */}
     {
@@ -65,7 +63,6 @@ function Cartera() {
   </div>
   }
       </div>
-      <Footer />  
     </>
 )
 

@@ -14,11 +14,10 @@ function Home() {
       .then((response)=>{
           let allCoins = response.data.data
           setCoins(allCoins)
-        //   console.log(allCoins)
-      }) .catch((err)=>{
+      }).catch((err)=>{
           console.log(err)
       })
-  } , [])
+  },[])
   const [amount, setAmount] = useState(0)
   useEffect (()=>{
   }, [amount])
