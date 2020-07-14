@@ -24,7 +24,7 @@ function Cartera() {
       }) .catch((err)=>{
           console.log(err)
       })
-  } , [])
+  },[])
 
 
   return (
@@ -35,7 +35,7 @@ function Cartera() {
     <div className="col-sm-12">
     <div className="card">
         <div className="card-body">
-            <h3>Your Crypto</h3>
+            <h3>Your Crypto Wallet</h3>
                   
             <table  className="table table-striped table-dark col-sm-12">
                 <tbody >
@@ -45,7 +45,6 @@ function Cartera() {
                     <th scope="col-sm-1">Change 24H</th>
                     <th scope="col-sm-2">Price</th>
                     <th scope="col-sm-2">Value USD</th>
-                    <th scope="col-sm-1">Share</th>
                 </tr>
 
                 {

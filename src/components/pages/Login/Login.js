@@ -2,11 +2,43 @@ import React, {useState, useEffect} from 'react'
 import Header from '../../layout/header/Header'
 import Footer from '../../layout/footer/Footer'
 import Cartera from '../Cartera/Cartera'
+import validation from './Validation'
+import { useHistory } from "react-router-dom"
 // import {BrowserRouter, Route, Switch, Link} from 'react-router-dom'
 
 import axios from 'axios'
 
 function Login() {
+
+    const history = useHistory();
+
+    function handleClick() {
+        history.push("/validation")
+    }
+
+    // function mandaSms(mensaje){
+        
+    //     axios.get(URLSMS)
+    //     .then((response)=>{
+    //         console.log(response.data)
+    //         patch2FA(mensaje)
+    //     }).catch((err)=>{
+    //         console.log(err)
+    //     })
+
+    // }
+
+    function patch2FA(mensaje){
+        const URL=`https://apiinfowallet.firebaseio.com/0.json`
+        axios.patch(URL, {
+            "2FA" : mensaje
+        })
+        .then((response)=>{
+            console.log(response.data)
+        }).catch((err)=>{
+            console.log(err)
+        })
+    }
 
     const URL=`https://apiinfowallet.firebaseio.com/.json`
     const [valida, setValida] = useState([])
@@ -29,11 +61,13 @@ function Login() {
                 console.log(err)
             })
             valida.map((user)=>{
-                if(user.Nombre == name && user.Pass == pass){
-                alert(`Bienvenido ${name}`)
-                // return <Link className="nav-link wallet" to="/cartera" />
+                if(user.Nombre != name && user.Pass != pass){
+                alert('Usuario no registrado')
             }else { 
-                alert('Usuario no registrado')}
+                alert(`Bienvenido ${name}`)
+                // mandaSms(Math.floor(Math.random() * 999999) + 1)
+                handleClick()
+            }
             })
         }
 
@@ -73,3 +107,20 @@ function Login() {
 }
 
 export default Login
+
+// import { useHistory } from "react-router-dom";
+
+// function HomeButton() {
+//   const history = useHistory();
+
+//   function handleClick() {
+//     history.push("/home");
+//   }
+
+//   return (
+//     <button type="button" onClick={handleClick}>
+//       Go home
+//     </button>
+//   );
+// }
+

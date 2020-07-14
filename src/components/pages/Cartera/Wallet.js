@@ -6,6 +6,7 @@ import Footer from '../../layout/footer/Footer'
 function Wallet() {
     return (
         <>
+        <div>{alert('The code is correct, Welcome Dany!')}</div>
         <Header  />
         <Cartera />
         <Footer />
