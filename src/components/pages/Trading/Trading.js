@@ -42,7 +42,8 @@ function Trading() {
       <br />
 
       <h3>Buy & Sell Crypto</h3>
-      <div className="row container">
+      <div className="container">
+        <div className = "row">
         <div className="col-sm-6">
           <form onSubmit={ejecutar}>
             <label>Select the Coin to Sell</label>
@@ -95,6 +96,7 @@ function Trading() {
             <span className="input-group-text col-sm-6">{coinBuy}</span>
             <span className="input-group-text col-sm-6">Precio</span>
           </form>
+        </div>
         </div>
       </div>
       <br />
