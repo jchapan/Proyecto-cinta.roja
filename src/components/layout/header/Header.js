@@ -4,8 +4,8 @@ import "./Header.css";
 
 function Header() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <ul className="nav">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <ul className="nav ">
         <li className="nav-item">
           <Link className="nav-link" to="/">
             Home

@@ -50,17 +50,17 @@ function Home() {
                   />
                 </div>
                 <br />
-                <table className="table table-striped table-dark">
+                <table className="table table-striped">
                   <tbody>
                     <tr>
-                      <th scope="col-sm-2">Name</th>
-                      <th scope="col-sm-1">Symbol</th>
-                      <th scope="col-sm-3">Market Cap</th>
-                      <th scope="col-sm-2">Price</th>
-                      <th scope="col-sm-1">Change 24H</th>
-                      <th scope="col-sm-1">Change 1H</th>
-                      <th scope="col-sm-1">Change 7D</th>
-                      <th scope="col-sm-1">Total</th>
+                      <th className="tituloTabla" scope="col-sm-2">Name</th>
+                      <th className="tituloTabla" scope="col-sm-1">Symbol</th>
+                      <th className="tituloTabla" scope="col-sm-3">Market Cap</th>
+                      <th className="tituloTabla" scope="col-sm-2">Price</th>
+                      <th className="tituloTabla" scope="col-sm-1">Change 24H</th>
+                      <th className="tituloTabla" scope="col-sm-1">Change 1H</th>
+                      <th className="tituloTabla" scope="col-sm-1">Change 7D</th>
+                      <th className="tituloTabla" scope="col-sm-1">Total</th>
                     </tr>
                     {coins.map((coin) => {
                       return (
