@@ -22,11 +22,11 @@ function Trading() {
       .then((response) => {
         let x = response.data;
         let r = x.map((cantidad) => {
-          return cantidad.name == coinSell ? cantidad.amount : undefined
+          return cantidad.name === coinSell ? cantidad.amount : undefined
         }) 
         setAmountSellCoin(r)
         let i = x.map((w) => {
-          return w.name == coinSell ? w.id : undefined;
+          return w.name === coinSell ? w.id : undefined;
       })
       setIDtoSell(i)
       })
@@ -49,7 +49,7 @@ function Trading() {
         console.log(precio)
         const agregar = (precio*amountToSell)+amountSellCoin
         console.log(agregar)
-        const URLUSDT = `https://apiinfowallet.firebaseio.com/0/coins/3/amount.json`;
+        // const URLUSDT= `https://apiinfowallet.firebaseio.com/0/coins/3/amount.json`;
         // axios.patch(URLUSDT, {agregar} )
         // const URLDescontar = `https://apiinfowallet.firebaseio.com/0/coins/${coinSell}/amount.json`
         // const restar = amountSellCoin-amountToSell

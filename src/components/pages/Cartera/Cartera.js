@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Header from "../../layout/header/Header";
-import Footer from "../../layout/footer/Footer";
+// import Header from "../../layout/header/Header";
+// import Footer from "../../layout/footer/Footer";
 // import GraficaCartera from './GraficaCartera'
 import MyCoins from "./MyCoins";
 
@@ -28,7 +28,7 @@ function Cartera() {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  });
 
   return (
     <>

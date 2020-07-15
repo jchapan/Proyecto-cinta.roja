@@ -19,7 +19,7 @@ function Home() {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  });
   const [amount, setAmount] = useState(0);
   useEffect(() => {}, [amount]);
 
