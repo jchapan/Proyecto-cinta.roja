@@ -28,7 +28,7 @@ function Cartera() {
       .catch((err) => {
         console.log(err);
       });
-  });
+  },[]);
 
   return (
     <>

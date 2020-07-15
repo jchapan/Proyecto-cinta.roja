@@ -19,7 +19,7 @@ function MyCoins(props) {
       .catch((err) => {
         console.log(err);
       });
-  });
+  },[]);
 
   return (
     <>
