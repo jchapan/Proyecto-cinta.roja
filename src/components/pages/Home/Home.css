@@ -1,12 +1,6 @@
 h3{
     text-align: center;
 }
-.input-group-text.bg-dark{
-    color: white
-}
-.form-control.col-sm-3.bg-dark{
-    color: white
-}
 .tituloTabla{
     position: static;
 }

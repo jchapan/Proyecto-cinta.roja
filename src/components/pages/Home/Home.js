@@ -34,13 +34,13 @@ function Home() {
                 <h3>Crypto Currency Info</h3>
                 <div className="input-group md-3">
                   <div className="input-group-prepend">
-                    <label className="input-group-text bg-dark" for="Moneda">
+                    <label className="input-group-text bg-light" for="Moneda">
                       Calc USD
                     </label>
                   </div>
                   <input
                     type="text"
-                    className="form-control col-sm-3 bg-dark"
+                    className="form-control col-sm-3 bg-light"
                     placeholder="Amount"
                     aria-label="Username"
                     aria-describedby="basic-addon1"

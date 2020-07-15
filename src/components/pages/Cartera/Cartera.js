@@ -40,7 +40,7 @@ function Cartera() {
               <div className="card-body">
                 <h3>Your Crypto Wallet</h3>
 
-                <table className="table table-striped table-dark col-sm-12">
+                <table className="table table-striped table-light col-sm-12">
                   <tbody>
                     <tr>
                       <th scope="col-sm-3">Name</th>
