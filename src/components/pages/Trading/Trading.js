@@ -25,10 +25,10 @@ function Trading() {
           return cantidad.name == coinSell ? cantidad.amount : undefined
         }) 
         setAmountSellCoin(r)
-      //   let i = x.map((w) => {
-      //     return w.name == coinSell ? w.id : undefined;
-      // })
-      // setIDtoSell(i)
+        let i = x.map((w) => {
+          return w.name == coinSell ? w.id : undefined;
+      })
+      setIDtoSell(i)
       })
       .catch((error) => {
         console.log(error);
@@ -41,16 +41,19 @@ function Trading() {
     if(amountToSell>amountSellCoin){
       alert('Please verify the Amount to sell')
     }else{
-      const URLPrecio = `https://api.coinlore.net/api/ticker/?id=${IDtoSell}`;
+      const URLPrecio = `https://api.coinlore.net/api/ticker/?id=${IDtoSell}`
+      console.log(URLPrecio)
       axios.get(URLPrecio)
       .then((response)=>{
-        let precio = response.data.price_usd
+        let precio = response.data
+        console.log(precio)
         const agregar = (precio*amountToSell)+amountSellCoin
+        console.log(agregar)
         const URLUSDT = `https://apiinfowallet.firebaseio.com/0/coins/3/amount.json`;
-        axios.patch(URLUSDT, {agregar} )
-        const URLDescontar = `https://apiinfowallet.firebaseio.com/0/coins/${coinSell}/amount.json`
-        const restar = amountSellCoin-amountToSell
-        axios.patch(URLDescontar, {restar})
+        // axios.patch(URLUSDT, {agregar} )
+        // const URLDescontar = `https://apiinfowallet.firebaseio.com/0/coins/${coinSell}/amount.json`
+        // const restar = amountSellCoin-amountToSell
+        // axios.patch(URLDescontar, {restar})
       }).catch((err)=>{
         console(err)
       })
@@ -109,7 +112,7 @@ function Trading() {
       </div>
       <br />
       <div className="row justify-content-center">
-        <button type="submit" className="btn btn-danger" id="trade" >
+        <button type="submit" className="btn btn-danger" id="trade" onClick={ejecutar}>
           Trade
         </button>
       </div>
