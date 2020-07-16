@@ -52,7 +52,6 @@ function Trade(props) {
             console.log(err)
         })
 
-        const URL
 
     }
     return (
